@@ -1,0 +1,121 @@
+﻿/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
+
+/* --------------------------------------------
+   TOP HEADER
+-------------------------------------------- */
+.top-header {
+    background-color: #4c2579;
+    height: 50px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.left-group {
+    display: flex;
+    height: 100%;
+}
+
+.logo-group {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+
+/* TRUNO Logo inside top-header */
+.truno-logo {
+    display: block;
+    width: 150px;
+    height: 40px;
+    background-color: white;
+    background-image: url('/assets/logo-truno.webp'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 20px;
+}
+
+.header-middle {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.header-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+/* Larger header height → large logo */
+@media (min-width: 768px) {
+    .truno-logo {
+        height: 50px;
+        background-size: auto 24px;
+    }
+}
+
+/* --------------------------------------------
+   SIDEBAR
+-------------------------------------------- */
+.menu {
+    position: fixed;
+    top: 45px;           
+    left: 0;
+    width: 225px;
+    height: calc(100vh - 40px);
+    background: #1e1e1e;
+    list-style: none;
+    padding-top: 20px;
+    padding-left: 0;
+}
+
+
+.menu li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    transition: 0.3s;
+    color: white;
+    font-size: 20px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none !important;
+    font-size: 17px;
+}
+
+.menu li:hover i,
+.menu li:hover a {
+    color: #64a944;
+}
+
+
+
+/* --------------------------------------------
+   PAGE CONTENT
+-------------------------------------------- */
+.content {
+    margin-left: 250px;     /* after sidebar */
+    margin-top: 40px;       /* below header */
+    padding: 25px;
+}
